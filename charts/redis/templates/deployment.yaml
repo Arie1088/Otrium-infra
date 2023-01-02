@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontphp-redis
+  labels:
+    app: frontphp
+spec:
+  selector:
+    matchLabels:
+      app: frontphp
+  template:
+    metadata:
+      name: frontphp-redis
+      labels:
+        app: frontphp
+    spec:
+      containers:
+        - name: test-redis
+          image: bitnami/redis
+          env:
+            - name: ALLOW_EMPTY_PASSWORD
+              value: "yes"
+          ports:
+            - containerPort: 6379

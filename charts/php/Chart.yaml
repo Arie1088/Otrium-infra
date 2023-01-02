@@ -1,0 +1,5 @@
+apiVersion: v2
+name: frontphp
+type: application
+version: 0.1.0
+description: A simple frontphp application
