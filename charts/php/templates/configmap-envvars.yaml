@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: frontphp-env-vars
+data:
+  APP_ENV: dev
+  REDIS_HOST: frontphp-redis
+  REDIS_PORT: "6379"
